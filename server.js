@@ -28,9 +28,14 @@ app.use(bodyParser.json({type: "application/vnd.api+json"}));
 
 
 
+// this tells the server what files are used for routing 
 
 require("./app/routing/apiRoutes.js")(app);
 require("./app/routing/htmlRoutes.js")(app);
+
+
+//this is the listener that is listening at the port 
+
 
 app.listen(PORT, function(){
 
@@ -38,15 +43,18 @@ app.listen(PORT, function(){
 
 });
 
-app.get("/survey", function(req, res){
-
-		console.log(path.join(__dirname, "../public/survey.html"));
-
-		res.sendFile(path.join(__dirname, "../public/survey.html"));
 
 
 
-	});
+// app.get("/survey", function(req, res){
+
+// 		console.log(path.join(__dirname, "../public/survey.html"));
+
+// 		res.sendFile(path.join(__dirname, "../public/survey.html"));
+
+
+
+	// });
 
 
 
